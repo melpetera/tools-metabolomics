@@ -177,17 +177,13 @@
       <param name="dataMatrix_in" value="ic_in_data_matrix.tabular"/>
       <param name="sampleMetadata_in" value="ic_in_sampleMetadata.tabular"/>
       <param name="variableMetadata_in" value="ic_in_variableMetadata.tabular"/>
-      <conditional name="method_cond">
-        <param name="method" value="one_class"/>
-        <param name="chosen_stat" value="mean,sd,NA"/>
-        <param name="class_col" value="uv"/>
-        <param name="class1" value="s"/>
-        <conditional name="test_fold_cond">
-          <param name="test_fold" value="Yes"/>
-          <param name="fold_frac" value="Bottom"/>
-          <param name="logarithm" value="log2"/>
-        </conditional>
-      </conditional>
+      <param name="method_cond|method" value="one_class"/>
+      <param name="method_cond|chosen_stat" value="mean,sd,NA"/>
+      <param name="method_cond|class_col" value="uv"/>
+      <param name="method_cond|class1" value="s"/>
+      <param name="method_cond|test_fold_cond|test_fold" value="Yes"/>
+      <param name="method_cond|test_fold_cond|fold_frac" value="Bottom"/>
+      <param name="method_cond|test_fold_cond|logarithm" value="log2"/>
       <output name="variableMetadata_out" file="ic_out_variableMetadata_oneclass.tabular"/>
     </test>
     <test>
