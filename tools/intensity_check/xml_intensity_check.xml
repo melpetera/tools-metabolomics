@@ -191,10 +191,8 @@
       <param name="dataMatrix_in" value="ic_in_data_matrix.tabular"/>
       <param name="sampleMetadata_in" value="ic_in_sampleMetadata.tabular"/>
       <param name="variableMetadata_in" value="ic_in_variableMetadata.tabular"/>
-      <conditional name="method_cond">
-          <param name="method" value="no_class" />
-          <param name="chosen_stat" value="mean,sd,median,quartile,decile,NA" />
-      </conditional>
+      <param name="method_cond|method" value="no_class" />
+      <param name="method_cond|chosen_stat" value="mean,sd,median,quartile,decile,NA" />
       <output name="variableMetadata_out" file="ic_out_variableMetadata_noclass.tabular"/>
     </test>
   </tests>
